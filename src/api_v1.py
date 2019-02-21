@@ -42,6 +42,8 @@ class RunTrainingJob(Resource):
 
 
 api.add_resource(ReadinessProbe, '/readiness')
+
+api.add_resource(ReadinessProbe, '/readiness')
 api.add_resource(AliveProbe, '/liveness')
 api.add_resource(RunTrainingJob, '/runjob', endpoint='runjob')
 app.register_blueprint(api_bp, url_prefix='/api/v1')
