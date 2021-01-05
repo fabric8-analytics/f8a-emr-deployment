@@ -1,6 +1,7 @@
 # f8a-emr-deployment
 
-[![Build Status](https://ci.centos.org/job/devtools-f8a-emr-deployment-build-master/badge/icon)](https://ci.centos.org/job/devtools-f8a-emr-deployment-build-master/)
+![CI](https://github.com/fabric8-analytics/f8a-emr-deployment/workflows/CI/badge.svg?branch=master)
+[![codecov](https://codecov.io/gh/fabric8-analytics/f8a-emr-deployment/branch/master/graph/badge.svg?token=qi833miGbI)](https://codecov.io/gh/fabric8-analytics/f8a-emr-deployment)
 
 Emr deployment service performs two job:
  - Run the retraining job for a given ecosystem

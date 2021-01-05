@@ -18,16 +18,16 @@ gc() {
 
 # be sure we use Python 3.6 or never
 check_python_version
+mkdir shared
 
 if [[ "$CI" -eq "0" ]];
 then
     make docker-build-test
-    docker run ${TEST_IMAGE_NAME}
+    docker run -v "$PWD/shared:/shared" ${TEST_IMAGE_NAME}
     docker stop ${TEST_IMAGE_NAME}
     trap gc EXIT SIGINT
 else
     # CI instance will be torn down anyway, don't need to waste time on gc
-    docker run ${TEST_IMAGE_NAME}
+    docker run -v "$PWD/shared:/shared" ${TEST_IMAGE_NAME}
 fi
-
 popd > /dev/null
