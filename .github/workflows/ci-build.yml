@@ -1,7 +1,9 @@
 name: CI
 
 on:
-  pull_request:
+   push:
+    branches: [ master ]
+   pull_request:
     branches: [ master ]
    
 jobs:
@@ -34,3 +36,8 @@ jobs:
         python-version: '3.6'
     - name: Run Unit Tests
       run: bash qa/runtest.sh
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v1
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        file: ./shared/coverage.xml   
