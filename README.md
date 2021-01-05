@@ -2,6 +2,7 @@
 
 ![CI](https://github.com/fabric8-analytics/f8a-emr-deployment/workflows/CI/badge.svg?branch=master)
 [![codecov](https://codecov.io/gh/fabric8-analytics/f8a-emr-deployment/branch/master/graph/badge.svg?token=qi833miGbI)](https://codecov.io/gh/fabric8-analytics/f8a-emr-deployment)
+
 Emr deployment service performs two job:
  - Run the retraining job for a given ecosystem
  - Returns the precision and recall of each trained model
