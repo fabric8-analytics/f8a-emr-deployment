@@ -22,6 +22,7 @@ objects:
         labels:
           service: f8a-emr-deployment
       spec:
+        serviceAccountName: dsaas-deploy
         containers:
         - command:
           - /bin/entrypoint.sh
